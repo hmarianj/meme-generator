@@ -193,7 +193,7 @@ button:focus {
     background-color: var(--ColorBtnHover);
 }
 
-.aside-none{
+.asideNone{
     display: none;
 }
 
