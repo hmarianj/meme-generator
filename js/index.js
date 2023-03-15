@@ -1,3 +1,5 @@
+// Universal selector
+
 const $ = (selector) => document.querySelector(selector)
 
 // FUNCTIONS
@@ -23,4 +25,20 @@ $("#btnText").addEventListener('click', () => {
 
 $("#asideClose").addEventListener('click', () => {
     $("#aside").style.display = 'none'
+})
+
+// Dark mode and light mode buttons 
+
+$("#btnLight").addEventListener( 'click', () => {
+    $("#btnLight").classList.add('none')
+    $("#btnDark").classList.remove('none')
+    $("body").classList.remove('darkMode')
+    $("body").classList.add('lightMode')
+})
+
+$("#btnDark").addEventListener( 'click' , () => {
+    $("#btnDark").classList.add('none')
+    $("#btnLight").classList.remove('none')
+    $('body').classList.remove('ligthMode')
+    $('body').classList.add('darkMode')
 })
