@@ -42,3 +42,22 @@ $("#btnDark").addEventListener( 'click' , () => {
     $('body').classList.remove('ligthMode')
     $('body').classList.add('darkMode')
 })
+
+// Image funtions
+
+//url image 
+
+$("#url").addEventListener("input", () =>{
+    $("#memeImage").style.backgroundImage = `url(${$("#url").value})`
+    $("#memeImage").style.backgroundSize = 'cover'
+})
+
+// Background Color
+
+
+$("#bgColor").addEventListener("input", () => {
+    const color = $("#bgColor").value
+    $("#memeImage").style.backgroundColor = color
+    $("#hexColor").innerText = color
+});
+
