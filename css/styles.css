@@ -1,0 +1,468 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+/* --- Light Mode / Dark Mode --- */
+
+body.lightMode{
+    --ColorHeader: #e0e0e0;
+    --ColorMemeEdit: #eeeeee;
+    --ColorAside: #fafafa;
+    --ColorFont: #272525;
+    --ColorBtnHover: #eeeeee;
+    --ColorForm: #e0e0e0;
+}
+
+body.darkMode{
+    --ColorHeader: #191e2b;
+    --ColorMemeEdit: #30343f;
+    --ColorAside: #202020;
+    --ColorFont: #fafafa;
+    --ColorBtnHover: #727272;
+    --ColorForm: #393e49;
+}
+
+
+/* --- Header ---  */
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--ColorMemeEdit);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header{
+    width: 100%;
+    height: 14vh;
+    background-color: var(--ColorHeader);
+    position: relative;
+    display: flex;
+    color: var(--ColorFont);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;  
+}
+
+.title{
+    text-align: center;
+    color: var(--ColorFont);
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: -1px;
+    padding-bottom: 7px;
+    margin-top: 5px;
+}
+
+.container-boton{
+    display: flex;
+    flex-flow: row wrap;
+    width: auto; 
+    margin-bottom: 15px;
+}
+
+i{
+    margin-right: 3px;
+}
+
+button{
+    font-size: 0.8rem;
+    color: var(--ColorFont);
+    border-radius: 0.3em;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    margin: 2px;
+    transition: background-color 0.3s;
+}
+
+button:hover{
+    border-radius: 0.3em;
+    background-color: var(--ColorBtnHover);
+    transition: background-color 0.3s;
+}
+
+button:focus {
+    background-color: var(--ColorBtnHover);
+}
+
+.none{
+    display: none;
+}
+
+
+/* --- Image Meme ---  */
+
+.meme-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.meme-canvas{
+    display: flex;
+    flex-direction: column;
+    height: 550px;
+    width: 550px;
+    margin-top: 25px;
+}
+
+.spaceUp, .spaceDown{
+    flex: 1 1 15%;
+    background-color: #fafafa;
+    padding-top: 20px;
+}
+
+.meme-imagen{
+    flex: 4 1 70%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+}
+
+.imagen-fondo{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.textUp, .textDown{
+    color: black;
+    font-size: 40px;
+    font-weight: 600;
+    font-family: Impact, sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0 15px;
+}
+
+.btnDownload{
+    padding: 0.7rem;
+    margin-top: 15px;
+    color: #fafafa;
+    border-radius: 0.3em;
+    background-color: #36943b;
+    outline: none;
+    border: none;
+}
+
+.btnDownload:hover{
+    background-color: rgb(111, 174, 116);
+    border-radius: 0.3em;
+    transition: background-color 0.3s;
+}
+
+/* --- Side editors --- */
+
+.aside{
+    width: 280px;
+    position: absolute;
+    height: 100vh;
+    background-color:var(--ColorAside);
+    color: var(--ColorFont);
+    font-family: 'Open Sans', sans-serif;
+    align-self: flex-end;
+    justify-self: flex-end;
+}
+
+.asideClose{
+    font-size: 15px;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    border-radius: 0.2em;
+}
+
+.asideClose:hover{
+    background-color: var(--ColorBtnHover);
+}
+
+.aside-none{
+    display: none;
+}
+
+
+/* --- Forms ---*/
+
+.form{
+    margin: 2.5rem 1rem;
+}
+
+h2{
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 15px;
+}
+
+.form h3{
+    color: var(--ColorFont);
+    font-size: 12px;
+    margin-top: 1rem;
+    margin-bottom: 0.1rem;
+}
+
+.input-texto, input[type=number]{
+    background-color: var(--ColorForm);
+    color: var(--ColorFont);
+    width: 100%;
+    height: 8px;
+    padding: 15px;
+    border: none;
+    border-radius: 0.3em;
+    margin-bottom: 5%;
+    margin-top: 10px;
+    outline-style: none;
+}
+
+.clFilters{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.9rem;
+}
+
+.clFilters label{
+    font-size: 10px;
+    margin-bottom: 0.3rem;
+}
+
+.file{
+    display: flex;
+    justify-content: space-between; 
+}
+
+.color span{
+    margin-left: 6px 5px;
+    position: absolute;
+    left: 45px;
+    top: 25.5%;
+    transform: translateY(-50%);
+    font-size: 14px;
+}
+
+.color input{
+    width: 40px;
+    background-color: transparent;
+    border: none;
+    outline-style: none;
+}
+
+.select{
+    background-color: var(--ColorForm);
+    color: var(--ColorFont);
+    outline-style: none;
+    border: none;
+    border-radius: 0.3em;
+    width: 100%;
+    height: 30px;
+    padding: 5px 10px; 
+    margin-top: 7px;  
+}
+
+.xMargin{
+    margin-top: 0px; 
+}
+
+
+/* --- Image Edit ---*/
+
+.inRange {
+    width: 100%;
+    background-color: #5a5d68;
+    border-radius: 10px;
+    appearance: none;
+    height: 5px;
+    margin-top: 9px;
+}
+
+.inRange::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background: rgb(140, 137, 137);
+    cursor: pointer;
+}
+
+.btnReset{
+    padding: 0.7rem;
+    margin-top: 35px;
+    color: var(--ColorFont);
+    background-color: var(--ColorForm);
+    border-radius: 0.3em;
+    outline: none;
+    border: none;
+}
+
+.btnReset:focus{
+    background-color: rgb(104, 103, 103);
+    border-radius: 0.3em;
+    transition: background-color 0.3s;
+}
+
+
+/* --- Form text --- */
+
+.formTextNone{
+    display: none;
+}
+
+.textCheckNone, .bgCheckNone{
+    margin-bottom: 1rem;
+}
+
+.textCheckNone, .bgCheckNone, label{
+    font-size: 12px;
+}
+
+#input-tamano{
+    width: 50%;
+}
+
+.editFontInputs{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.btnAlings{
+    margin-left: 13px;
+}
+
+.boton-alineacion{
+    background-color: var(--ColorForm);
+    color: var(--ColorFont);
+}
+
+.bgColorText{
+    margin-bottom: 1rem;
+}
+
+.fila{
+    display: flex;
+    justify-content: space-between;
+}
+
+.color span{
+    margin-left: 15px;
+}
+
+.color input{
+    width: 40px;
+    background-color: transparent;
+    border: none;
+    outline-style: none;
+}
+
+.chxColorText{
+    padding: 5px 5px;
+}
+
+.btnContour{
+    padding: 7px;
+    background-color: var(--ColorForm);
+    color: var(--ColorFont);
+    outline-style: none;
+    border: none;
+    border-radius: 0.3em;
+}
+
+.btnContour:hover , .boton-alineacion:hover{
+    background-color: rgb(179, 179, 179);
+    color: #121212;
+}
+
+.contorno-blanco{
+    -webkit-text-stroke: 3px white; 
+}
+
+.contorno-negro{
+    -webkit-text-stroke: 3px black; 
+}
+
+
+/* --- RESPONSIVE --- */
+
+@media(max-width:650px){
+    .aside{
+        width:100%;
+    }
+
+.meme-canvas{
+    height: 400px;
+    width: 400px;
+    }
+
+    .texto-superior, .texto-interior{
+        font-size: 25px;
+    }
+}
+
+@media(max-width:420px){
+    .meme-canvas{
+        height: 250px;
+        width: 250px;
+    }
+
+    .texto-superior, .texto-interior{
+        font-size: 15px;
+    }
+
+    .header{
+        height: 35vh;
+    }
+
+    .titular{
+        font-size: 1.8rem;
+    }
+
+    .boton-container{
+        flex-direction: column;
+    }
+
+    .boton-container button{
+        margin: 5px;
+    }
+
+    .clFilters{
+        margin-top: 0.4rem;
+    }
+
+    .clFilters label{
+        font-size: 10px;
+    }
+
+    .inRange{
+        height: 8px;
+        margin: 3px 0;
+    }
+
+    .inText, input[type=number]{
+        height: 12px;
+        padding: 12px;
+        margin-bottom: 3%;
+        margin-top: 5px;
+        outline-style: none;
+    }
+
+    .textCheckNone, .bgCheckNone, .selectFont{
+        margin-bottom: 0.5rem;
+    }
+}
+
+

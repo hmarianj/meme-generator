@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Generador de Memes">
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+    rel="stylesheet">
+    <!-- Icon favicon -->
+    <link rel="icon" href="/img/dog-favicon.jpg">
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <!-- CSS page -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Generador de Memes</title>
+</head>
+
+<body class="darkMode">
+    <!-- Header container -->
+    <main class="container">
+        <header class="header">
+            <div>
+                <h1 class="title">Generador de Memes</h1>
+            </div>
+            <div class="btnBox">
+                <!-- Main buttons -->
+                <button id="imageBtn" aria-label="Edición de imagen">
+                    <i class="fas fa-file-image"></i>
+                    Imagen
+                </button>
+                <button id="btnText" aria-label="Edición de texto">
+                    <i class="fas fa-font"></i>
+                    Texto
+                </button>
+                <button id="btnLight" aria-label="Cambiar a vista en modo oscuro">
+                    <i class="far fa-lightbulb"></i>
+                    Modo claro
+                </button>
+                <button id="btnDark" class="none" aria-label="Cambiar a vista en modo claro">
+                    <i class="fas fa-lightbulb"></i>
+                    Modo oscuro
+                </button>
+            </div>
+        </header>
+            <!-- Image Container -->
+            <section class="meme-canvas" id="meme-canvas">
+                <article class="spaceUp" id="boxSpaceUp">
+                    <p id="imgTextUp" class="textUp">Texto superior</p>
+                </article>
+                <article class="meme-imagen" id="memeImage"></article>
+                <article class="spaceDown" id="boxSpaceDown">
+                    <p id="textDown" class="textDown">Texto inferior</p>
+                </article>  
+            </section>
+            <!-- Btn Download -->
+            <button class="btnDownload" id="btnDownload">
+                <i class="fas fa-cloud-download-alt" aria-hidden="true"></i>
+                Descargar meme
+            </button>
+    </main>
+    <!-- Side editors -->
+    <aside class="aside aside-none" id="aside">
+        <button class="asideClose" id="asideClose" aria-label="Close Editor">
+            x
+        </button>
+        <!-- Create Meme -->
+        <form class="form imgFormNone" id="imgEdit">
+            <h2>IMAGEN</h2>
+            <div>
+                <h3>URL</h3>
+                <label for="url"></label>
+                <input type="url" id="url" class="inText" aria-label="Direccion URL de la imagen">
+            </div>
+        <!-- Image Background -->  
+            <h3>FONDO</h3>
+            <div class="file">
+                <div class="file color">
+                    <label for=""></label>
+                    <input type="color" id="bgColor" value="#000000" aria-label="Selección color de fondo de imagen">
+                    <span id="hexColor">#FAFAFA</span>
+                </div>
+                <div>
+                    <label for=""></label>
+                    <select name="bgEdit" id="propiedad-fondo" class="select xMargin" aria-label="Selección de blend de fondo">
+                        <option value="unset">Ninguno</option>
+                        <option value="lighten">Aclarar</option>
+                        <option value="darken">Oscurecer</option>
+                        <option value="difference">Diferencia</option>
+                        <option value="luminosity">Luminosidad</option>
+                        <option value="multiply">Multiplicar</option>
+                    </select>
+                </div>
+            </div>
+            <!-- Image Filters -->
+            <h3>FILTROS</h3>
+            <div class="boxRange">
+                <div class="clFilters">
+                    <label for="">BRILLO</label>
+                    <input type="range" id="glow" class="inRange">
+                </div>
+                <div class="clFilters">
+                    <label for="">OPACIDAD</label>
+                    <input type="range" id="opacity" class="inRange">
+                </div>
+                <div class="clFilters">
+                    <label for="contraste">CONTRASTE</label>
+                    <input type="range" id="contrast" class="inRange" >
+                </div>
+                <div class="clFilters">
+                    <label for="desenfoque">DESENFOQUE</label>
+                    <input type="range" id="blur" class="inRange" >
+                </div>
+                <div class="clFilters">
+                    <label for="grises">ESCALA DE GRISES</label>
+                    <input type="range" id="greyScale" class="inRange">
+                </div>
+                <div class="clFilters">
+                    <label for="">SEPIA</label>
+                    <input type="range" id="sepia" class="inRange">
+                </div>
+                <div class="clFilters">
+                    <label for="">HUE</label>
+                    <input type="range" id="hue" class="inRange">
+                </div>
+                <div class="clFilters">
+                    <label for="">SATURADO</label>
+                    <input type="range" id="crowded" class="inRange">
+                </div>
+                <div class="clFilters">
+                    <label for="negativo">NEGATIVO</label>
+                    <input type="range" id="negativo" class="inRange">
+                </div>       
+            </div>  
+            <button class="btnReset" id="restFilter" aria-label="Reestablecer todos los filtros anteriores">Reestablecer filtros</button>
+        </form>  
+
+        <!-- Text Editor -->
+        <form class="form formTextNone" id="formText"> 
+            <h2>TEXTO</h2>
+            <div>
+                <h3>SUPERIOR</h3>
+                <label for=""></label>
+                <input type="text" id="inTextUp" value="TEXTO SUPERIOR" class="inText" aria-label="Ingresa el texto superior del meme">
+            </div>
+            <div class="textCheckNone">
+                <input type="checkbox" id="checkUp">
+                <label for="">Sin texto superior</label>
+            </div>
+            <div>
+                <h3>INFERIOR</h3>
+                <label for=""></label>
+                <input type="text" id="inTextDown" value="TEXTO INFERIOR" class="inText" aria-label="Ingresa el texto inferior del meme">
+            </div>
+            <div class="textCheckNone">
+                <input type="checkbox" id="checkDown">
+                <label for="">Sin texto inferior</label>
+            </div>
+            <div class="selectFont">
+                <h3>FUENTE</h3>
+                <label for=""></label>
+                <select name="option" id="opcionFont" class="selector" aria-label="Selección del tipo de fuente">
+                    <option value="arial">Arial</option>
+                    <option value="arial black">Arial Black</option>
+                    <option value="american type writer">American Type Writer</option>
+                    <option value="andale mono">Andale Mono</option>
+                    <option value="verdana">Verdana</option>
+                    <option value="helvetica">Helvética</option>
+                    <option value="impact">Impact</option>
+                </select>
+            </div>
+            <!-- Font Size and aling text -->     
+            <div class= "editFontInputs">
+                <input id="fontSize" type="number" value="40">
+                <div class="btnAlings">
+                    <button id="left" class="btnAlings" aria-label="Justificar texto a la izquierda">
+                        <i class="fas fa-align-left"></i>
+                    </button>
+                    <button id="center" class="btnAlings" aria-label="Justificar texto al centro">
+                        <i class="fas fa-align-center"></i>
+                    </button>
+                    <button id="right" class="btnAlings" aria-label="Justificar texto a la derecha">
+                        <i class="fas fa-align-right"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Text colors edit -->     
+            <div class="file bgColorText"> 
+                <div class="clFilters">
+                    <h3>COLOR</h3>
+                    <label for=""></label>
+                    <div class="file color">
+                        <input type="color" id="colorText" value="#102034" aria-label="Selección de color de texto">
+                        <div class="hxColorText">#FAFAFA</div>
+                    </div>
+                </div>
+                <div class="clFilters">
+                    <h3>FONDO</h3>
+                    <label for="bgColorText"></label>
+                    <div class="file color">
+                        <input type="color" id="bgColorText" value="#FFFFFF" aria-label="Selección de color del fondo del texto">
+                        <div class="hxColorText">#FAFAFA</div>
+                    </div>
+                </div>
+            </div>
+            <div class="bgCheckNone">
+                <input type="checkbox" id="noneBg">
+                <label for="">Fondo transparente</label>
+            </div>
+            <div>
+                <h3>CONTORNO</h3>
+                <div class="btnContourBox">
+                    <button id="noneContour" class="btnContour" aria-label="Texto sin contorno">Ninguno</button>
+                    <button id="contorno-claro" class="btnContour" aria-label="Texto con contorno claro">Claro</button>
+                    <button id="contorno-oscuro" class="btnContour" aria-label="Texto con contorno oscuro">Oscuro</button>
+                </div>
+            </div>
+            <div>
+                <h3>ESPACIADO</h3>
+                <label for=""></label>
+                <input id="espace" type="number" value="35" min="10" max="50" >
+            </div>
+            <div>
+                <h3>INTERLINEADO</h3>
+                <label for=""></label>
+                <select name="leading" id="leading" class="selector">
+                    <option value="0.8">0.8</option>
+                    <option value="1">1</option>
+                    <option value="1.2">1.2</option>
+                    <option value="1.5">1.5</option>
+                    <option value="2">2</option>
+                    <option value="2.5">2.5</option>
+                </select>
+            </div>
+        </form>
+    </aside>
+    <script src="/js/index.js"></script>
+</body>
+</html>
