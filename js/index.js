@@ -102,3 +102,26 @@ const resetFilters = () => {
 $("section").addEventListener("input", filterImg)
 $("#restFilter").addEventListener("click", resetFilters)
 
+// Text funtions 
+
+// Add and deletes texts
+
+$("#inTextUp").addEventListener("input", () => $("#imgTextUp").innerText = inTextUp.value)
+$("#inTextDown").addEventListener("input", () => $("#textDown").innerText = inTextDown.value)
+
+$("#checkUp").addEventListener('click', () => {
+    if ($("#checkUp").checked) {
+        $(".spaceUp").style.display = 'none'
+    } else {
+        $(".spaceUp").style.display = ''
+    }
+})
+
+
+$("#checkDown").addEventListener('click', () => {
+    if ($("#checkDown").checked) {
+        $(".spaceDown").style.display = 'none'
+    } else {
+        $(".spaceDown").style.display = ''
+    }
+})
