@@ -66,7 +66,7 @@
             x
         </button>
         <!-- Create Meme -->
-        <form class="form imgFormNone" id="imgEdit">
+        <section class="form imgFormNone" id="imgEdit">
             <h2>IMAGEN</h2>
             <div>
                 <h3>URL</h3>
@@ -78,12 +78,12 @@
             <div class="file">
                 <div class="file color">
                     <label for=""></label>
-                    <input type="color" id="bgColor" value="#000000" aria-label="Selección color de fondo de imagen">
-                    <p id="hexColor">#000000</p>
+                    <input type="color" id="bgColor" value="#FFFFFF" aria-label="Selección color de fondo de imagen">
+                    <p id="hexColor">#FFFFFF</p>
                 </div>
                 <div>
                     <label for=""></label>
-                    <select name="bgEdit" id="bgEditcColor" class="select xMargin" aria-label="Selección de blend de fondo">
+                    <select name="bgEditColor" id="bgEditColor" class="select xMargin" aria-label="Selección de blend de fondo">
                         <option value="unset">Ninguno</option>
                         <option value="lighten">Aclarar</option>
                         <option value="darken">Oscurecer</option>
@@ -98,46 +98,46 @@
             <div class="boxRange">
                 <div class="clFilters">
                     <label for="">BRILLO</label>
-                    <input type="range" id="glow" class="inRange">
+                    <input type="range" id="glow" class="inRange" min="0" max="1" value="1" step="0.1" >
                 </div>
-                <div class="clFilters">
+                <div class="">
                     <label for="">OPACIDAD</label>
-                    <input type="range" id="opacity" class="inRange">
+                    <input type="range" id="opacity" class="inRange"  min="0" max="1" value="1" step="0.1">
                 </div>
                 <div class="clFilters">
-                    <label for="contraste">CONTRASTE</label>
-                    <input type="range" id="contrast" class="inRange" >
+                    <label for="">CONTRASTE</label>
+                    <input type="range" id="contrast" class="inRange" min="100" max="1000" value="100" step="1" >
                 </div>
                 <div class="clFilters">
-                    <label for="desenfoque">DESENFOQUE</label>
-                    <input type="range" id="blur" class="inRange" >
+                    <label for="">DESENFOQUE</label>
+                    <input type="range" id="blur" class="inRange"  min="0" max="10" value="0" step="0.1" >
                 </div>
                 <div class="clFilters">
                     <label for="grises">ESCALA DE GRISES</label>
-                    <input type="range" id="greyScale" class="inRange">
+                    <input type="range" id="greyScale" class="inRange" min="0" max="100" value="0" step="1">
                 </div>
                 <div class="clFilters">
                     <label for="">SEPIA</label>
-                    <input type="range" id="sepia" class="inRange">
+                    <input type="range" id="sepia" class="inRange" min="0" max="100" value="0" step="1">
                 </div>
                 <div class="clFilters">
                     <label for="">HUE</label>
-                    <input type="range" id="hue" class="inRange">
+                    <input type="range" id="hue" class="inRange" min="0" max="359" value="0" step="1">
                 </div>
                 <div class="clFilters">
                     <label for="">SATURADO</label>
-                    <input type="range" id="crowded" class="inRange">
+                    <input type="range" id="crowded" class="inRange" min="100" max="1000" value="100" step="10">
                 </div>
                 <div class="clFilters">
-                    <label for="negativo">NEGATIVO</label>
-                    <input type="range" id="negativo" class="inRange">
+                    <label for="">NEGATIVO</label>
+                    <input type="range" id="negativo" class="inRange" min="0" max="1" value="0" step="0.1">
                 </div>       
-            </div>  
+            </div> 
             <button class="btnReset" id="restFilter" aria-label="Reestablecer todos los filtros anteriores">Reestablecer filtros</button>
-        </form>  
+        </section>  
 
         <!-- Text Editor -->
-        <form class="form formTextNone" id="formText"> 
+        <section class="form formTextNone" id="formText"> 
             <h2>TEXTO</h2>
             <div>
                 <h3>SUPERIOR</h3>
@@ -233,7 +233,7 @@
                     <option value="2.5">2.5</option>
                 </select>
             </div>
-        </form>
+        </section>
     </aside>
     <script src="/js/index.js"></script>
 </body>
