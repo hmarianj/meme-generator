@@ -209,7 +209,7 @@ h2{
     margin-bottom: 0.1rem;
 }
 
-.input-texto, input[type=number]{
+.input-texto {
     background-color: var(--ColorForm);
     color: var(--ColorFont);
     width: 100%;
@@ -335,6 +335,7 @@ h2{
 
 .btnAlings{
     margin-left: 13px;
+    display: flex;
 }
 
 .boton-alineacion{
@@ -445,7 +446,7 @@ h2{
         margin: 3px 0;
     }
 
-    .inText, input[type=number]{
+    .inText {
         height: 12px;
         padding: 12px;
         margin-bottom: 3%;
