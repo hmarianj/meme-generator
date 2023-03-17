@@ -21,10 +21,10 @@
     <!-- Header container -->
     <main class="container">
         <header class="header">
-            <div>
+            <section>
                 <h1 class="title">Generador de Memes</h1>
-            </div>
-            <div class="btnBox">
+            </section>
+            <section class="btnBox">
                 <!-- Main buttons -->
                 <button id="imageBtn" aria-label="Edición de imagen">
                     <i class="fas fa-file-image"></i>
@@ -42,7 +42,7 @@
                     <i class="fas fa-lightbulb"></i>
                     Modo oscuro
                 </button>
-            </div>
+            </section>
         </header>
             <!-- Image Container -->
             <section class="memeContainer" id="memeContainer">
@@ -51,7 +51,7 @@
                 </article>
                 <article class="memeImage" id="memeImage"></article>
                 <article class="spaceDown" id="boxSpaceDown">
-                    <p id="textDown" class="textDown">Botton text</p>
+                    <p id="imgTextDown" class="textDown">Botton text</p>
                 </article>  
             </section>
             <!-- Btn Download -->
@@ -75,13 +75,13 @@
             </div>
         <!-- Image Background -->  
             <h3>FONDO</h3>
-            <div class="file">
-                <div class="file color">
+            <section class="file">
+                <article class="file color">
                     <label for=""></label>
                     <input type="color" id="bgColor" value="#FFFFFF" aria-label="Selección color de fondo de imagen">
                     <p id="hexColor">#FFFFFF</p>
-                </div>
-                <div>
+                </article>
+                <article>
                     <label for=""></label>
                     <select name="bgEditColor" id="bgEditColor" class="select xMargin" aria-label="Selección de blend de fondo">
                         <option value="unset">Ninguno</option>
@@ -91,137 +91,139 @@
                         <option value="luminosity">Luminosidad</option>
                         <option value="multiply">Multiplicar</option>
                     </select>
-                </div>
-            </div>
+                </article>
+            </section>
             <!-- Image Filters -->
             <h3>FILTROS</h3>
-            <div class="boxRange">
-                <div class="clFilters">
+            <section class="boxRange">
+                <article class="clFilters">
                     <label for="">BRILLO</label>
                     <input type="range" id="glow" class="inRange" min="0" max="1" value="1" step="0.1" >
-                </div>
-                <div class="">
+                </article>
+                <article class="">
                     <label for="">OPACIDAD</label>
                     <input type="range" id="opacity" class="inRange"  min="0" max="1" value="1" step="0.1">
-                </div>
-                <div class="clFilters">
+                </article>
+                <article class="clFilters">
                     <label for="">CONTRASTE</label>
                     <input type="range" id="contrast" class="inRange" min="100" max="1000" value="100" step="1" >
-                </div>
-                <div class="clFilters">
+                </article>
+                <article class="clFilters">
                     <label for="">DESENFOQUE</label>
                     <input type="range" id="blur" class="inRange"  min="0" max="10" value="0" step="0.1" >
-                </div>
-                <div class="clFilters">
+                </article>
+                <article class="clFilters">
                     <label for="grises">ESCALA DE GRISES</label>
                     <input type="range" id="greyScale" class="inRange" min="0" max="100" value="0" step="1">
-                </div>
-                <div class="clFilters">
+                </article>
+                <article class="clFilters">
                     <label for="">SEPIA</label>
                     <input type="range" id="sepia" class="inRange" min="0" max="100" value="0" step="1">
-                </div>
-                <div class="clFilters">
+                </article>
+                <article class="clFilters">
                     <label for="">HUE</label>
                     <input type="range" id="hue" class="inRange" min="0" max="359" value="0" step="1">
-                </div>
-                <div class="clFilters">
+                </article>
+                <article class="clFilters">
                     <label for="">SATURADO</label>
                     <input type="range" id="crowded" class="inRange" min="100" max="1000" value="100" step="10">
-                </div>
-                <div class="clFilters">
+                </article>
+                <article class="clFilters">
                     <label for="">NEGATIVO</label>
                     <input type="range" id="negativo" class="inRange" min="0" max="1" value="0" step="0.1">
-                </div>       
-            </div> 
+                </article>       
+            </section> 
             <button class="btnReset" id="restFilter" aria-label="Reestablecer todos los filtros anteriores">Reestablecer filtros</button>
         </section>  
 
         <!-- Text Editor -->
         <section class="form formTextNone" id="formText"> 
             <h2>TEXTO</h2>
-            <div>
+            <article>
                 <h3>SUPERIOR</h3>
                 <label for=""></label>
                 <input type="text" id="inTextUp" value="" class="inText" aria-label="Ingresa el texto superior del meme">
-            </div>
-            <div class="textCheckNone">
+            </article>
+            <article class="textCheckNone">
                 <input type="checkbox" id="checkUp">
                 <label for="">Sin texto superior</label>
-            </div>
-            <div>
+            </article>
+            <article>
                 <h3>INFERIOR</h3>
                 <label for=""></label>
                 <input type="text" id="inTextDown" value="" class="inText" aria-label="Ingresa el texto inferior del meme">
-            </div>
-            <div class="textCheckNone">
+            </article>
+            <article class="textCheckNone">
                 <input type="checkbox" id="checkDown">
                 <label for="">Sin texto inferior</label>
-            </div>
-            <div class="selectFont">
+            </article>
+            <section class="selectFont">
                 <h3>FUENTE</h3>
                 <label for=""></label>
                 <select name="option" id="opcionFont" class="selector" aria-label="Selección del tipo de fuente">
-                    <option value="arial">Arial</option>
-                    <option value="arial black">Arial Black</option>
-                    <option value="american type writer">American Type Writer</option>
-                    <option value="andale mono">Andale Mono</option>
-                    <option value="verdana">Verdana</option>
-                    <option value="helvetica">Helvética</option>
-                    <option value="impact">Impact</option>
+                    <option value="American Typewrite">American Typewrite</option>
+                    <option value="Andale Mono">Andale Mono</option>
+                    <option value="Arial">Arial</option>
+                    <option value="Arial Black">Arial Black</option>
+                    <option value="Comic Sans MS">Comic Sans MS</option>
+                    <option value="Helvetica">Helvetica</option>
+                    <option value="Impact" selected>Impact</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="Verdana">Verdana</option>
                 </select>
-            </div>
+            </section>
             <!-- Font Size and aling text -->     
-            <div class= "editFontInputs">
+            <section class= "editFontInputs">
                 <input id="fontSize" type="number" value="40">
-                <div class="btnAlings">
-                    <button id="left" class="btnAlings" aria-label="Justificar texto a la izquierda">
+                <article class="btnAlings">
+                    <button id="left"  aria-label="Justificar texto a la izquierda">
                         <i class="fas fa-align-left"></i>
                     </button>
-                    <button id="center" class="btnAlings" aria-label="Justificar texto al centro">
+                    <button id="center"  aria-label="Justificar texto al centro">
                         <i class="fas fa-align-center"></i>
                     </button>
-                    <button id="right" class="btnAlings" aria-label="Justificar texto a la derecha">
+                    <button id="right"  aria-label="Justificar texto a la derecha">
                         <i class="fas fa-align-right"></i>
                     </button>
-                </div>
-            </div>
+                </article>
+            </section>
             <!-- Text colors edit -->     
-            <div class="file bgColorText"> 
-                <div class="clFilters">
+            <section class="file bgColorText"> 
+                <article class="clFilters">
                     <h3>COLOR</h3>
                     <label for=""></label>
                     <div class="file color">
                         <input type="color" id="colorText" value="#102034" aria-label="Selección de color de texto">
                         <div class="hxColorText">#FAFAFA</div>
                     </div>
-                </div>
-                <div class="clFilters">
+                </article>
+                <article class="clFilters">
                     <h3>FONDO</h3>
                     <label for="bgColorText"></label>
                     <div class="file color">
                         <input type="color" id="bgColorText" value="#FFFFFF" aria-label="Selección de color del fondo del texto">
                         <div class="hxColorText">#FAFAFA</div>
                     </div>
-                </div>
-            </div>
-            <div class="bgCheckNone">
+                </article>
+            </section>
+            <article class="bgCheckNone">
                 <input type="checkbox" id="noneBg">
                 <label for="">Fondo transparente</label>
-            </div>
-            <div>
+            </article>
+            <article>
                 <h3>CONTORNO</h3>
                 <div class="btnContourBox">
                     <button id="noneContour" class="btnContour" aria-label="Texto sin contorno">Ninguno</button>
                     <button id="contorno-claro" class="btnContour" aria-label="Texto con contorno claro">Claro</button>
                     <button id="contorno-oscuro" class="btnContour" aria-label="Texto con contorno oscuro">Oscuro</button>
                 </div>
-            </div>
-            <div>
+            </article>
+            <article>
                 <h3>ESPACIADO</h3>
                 <label for=""></label>
                 <input id="espace" type="number" value="35" min="10" max="50" >
-            </div>
-            <div>
+            </article>
+            <section>
                 <h3>INTERLINEADO</h3>
                 <label for=""></label>
                 <select name="leading" id="leading" class="selector">
@@ -232,7 +234,7 @@
                     <option value="2">2</option>
                     <option value="2.5">2.5</option>
                 </select>
-            </div>
+            </section>
         </section>
     </aside>
     <script src="/js/index.js"></script>
