@@ -107,7 +107,9 @@ $("#restFilter").addEventListener("click", resetFilters)
 // Add and deletes texts
 
 $("#inTextUp").addEventListener("input", () => $("#imgTextUp").innerText = inTextUp.value)
-$("#inTextDown").addEventListener("input", () => $("#textDown").innerText = inTextDown.value)
+$("#inTextDown").addEventListener("input", () => $("#imgTextDown").innerText = inTextDown.value)
+
+// Checkboxs
 
 $("#checkUp").addEventListener('click', () => {
     if ($("#checkUp").checked) {
@@ -117,7 +119,6 @@ $("#checkUp").addEventListener('click', () => {
     }
 })
 
-
 $("#checkDown").addEventListener('click', () => {
     if ($("#checkDown").checked) {
         $(".spaceDown").style.display = 'none'
@@ -125,3 +126,33 @@ $("#checkDown").addEventListener('click', () => {
         $(".spaceDown").style.display = ''
     }
 })
+
+// Edit font family
+
+$(".selectFont").addEventListener('change', () => {
+    $("#imgTextUp").style.fontFamily = `${$("#opcionFont").value}`
+    $("#imgTextDown").style.fontFamily = `${$("#opcionFont").value}`
+})
+
+$("#fontSize").addEventListener('input', () => {
+    $("#imgTextUp").style.fontSize = `${$("#fontSize").value}px`
+    $("#imgTextDown").style.fontSize = `${$("#fontSize").value}px`
+})
+
+// Aling texts
+
+$('#left').addEventListener ('click', () => {
+    $('#imgTextUp').style.textAlign = 'left'
+    $('#imgTextDown').style.textAlign = 'left'
+})
+
+$('#center').addEventListener ('click', () => {
+    $('#imgTextUp').style.textAlign = 'center'
+    $('#imgTextDown').style.textAlign = 'center'
+})
+
+$('#right').addEventListener ('click', () => {
+    $('#imgTextUp').style.textAlign = 'right'
+    $('#imgTextDown').style.textAlign = 'right'
+})
+
