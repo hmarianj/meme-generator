@@ -156,3 +156,24 @@ $('#right').addEventListener ('click', () => {
     $('#imgTextDown').style.textAlign = 'right'
 })
 
+// Text colors
+
+const colorNewText = () => {
+    $("#imgTextUp").style.color = $("#colorText").value
+    $("#imgTextDown").style.color = $("#colorText").value
+    $("#hxColorChange").innerText = `${$("#colorText").value}`
+
+}
+
+$("#colorText").addEventListener('input', () => colorNewText ())
+
+// Backgrund color
+
+const bgColorTextChange = () => {
+    $(".spaceUp").style.backgroundColor = $("#bgColorText").value
+    $(".spaceDown").style.backgroundColor = $("#bgColorText").value
+    $("#hxColorChangeBg").innerHTML = `${$("#bgColorText").value}`
+}
+
+$("#bgColorText").addEventListener('input', () => bgColorTextChange())
+
