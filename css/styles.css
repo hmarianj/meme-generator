@@ -381,11 +381,11 @@ h2{
     color: #121212;
 }
 
-.contorno-blanco{
+.whiteOutline{
     -webkit-text-stroke: 3px white; 
 }
 
-.contorno-negro{
+.blackOutline{
     -webkit-text-stroke: 3px black; 
 }
 

@@ -177,3 +177,28 @@ const bgColorTextChange = () => {
 
 $("#bgColorText").addEventListener('input', () => bgColorTextChange())
 
+// Backgrund transparent
+
+// por hacer aun 
+
+// None, Dark and ligth outline
+
+$("#noneContour").addEventListener('click', () => {
+    $('#imgTextUp').classList.remove('blackOutline')
+    $('#imgTextUp').classList.remove('whiteOutline')
+    $('#imgTextDown').classList.remove('blackOutline')
+    $('#imgTextDown').classList.remove('whiteOutline')
+})
+
+$("#clearOutline").addEventListener('click', () => {
+    $('#imgTextUp').classList.remove('blackOutline')
+    $('#imgTextUp').classList.add('whiteOutline')
+    $('#imgTextDown').classList.remove('blackOutline')
+    $('#imgTextDown').classList.add('whiteOutline')
+})
+
+$("#darkOutline").addEventListener('click', () => {
+    $('#imgTextUp').classList.add('blackOutline')
+    $('#imgTextDown').classList.add('blackOutline')
+})
+
