@@ -202,3 +202,15 @@ $("#darkOutline").addEventListener('click', () => {
     $('#imgTextDown').classList.add('blackOutline')
 })
 
+$("#espace").addEventListener('input', () => {
+    $('#imgTextUp').style.paddingTop = `${$("#espace").value}px`
+    $('#imgTextUp').style.paddingBottom = `${$("#espace").value}px`
+    $('#imgTextDown').style.paddingTop = `${$("#espace").value}px`
+    $('#imgTextDown').style.paddingBottom = `${$("#espace").value}px`
+})
+
+$("#leading").addEventListener('change', () => {
+    $('#imgTextUp').style.lineHeight = $("#leading").value
+    $('#imgTextDown').style.lineHeight = $("#leading").value
+})
+
