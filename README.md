@@ -1,16 +1,15 @@
-# Meme-generator 
+# Meme Generator 
 
-## About the project
+## About the project 🌟
 
 I present to you the meme generator, a project that he makes for the final javascript module - Ada Itw.
 
-### Used technologies
-
+### Used technologies 💻
 - Html
 - CSS (responsive)
 - Javascript (Variables, Conditionals, Functions, DOM, Events and Library (dom-to-image))
 
-### Meme Generator Features:
+### Meme Generator Features ⚙️:
 
 You will be able to create the memes that you like the most and download them
 
@@ -21,6 +20,16 @@ You will be able to create the memes that you like the most and download them
 5. Dark and light mode version
 6. Have fun adding filters and colors to your image
 
-## Images :framed_picture:
+## Project images 📸
+![image](./img/ligthMode.png)
+![image](./img/darkMode.png)
+![image](./img/iphoneAndIpad2.png)
+![image](./img/IpadAndIphone.png)
+
+## Meme Images :framed_picture:
 
 Look at some pictures of my project
+
+![image](./img/felizMeme.png)
+
+![image](./img/memeMe.png)
