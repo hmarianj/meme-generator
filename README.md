@@ -4,6 +4,8 @@
 
 I present to you the meme generator, a project that he makes for the final javascript module - Ada Itw.
 
+Link to project: https://github.com/hmarianj/meme-generator/deployments/activity_log?environment=github-pages
+
 ### Used technologies 💻
 - Html
 - CSS (responsive)
