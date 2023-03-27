@@ -179,6 +179,16 @@ $("#bgColorText").addEventListener('input', () => bgColorTextChange())
 
 // Backgrund transparent
 
+$("#noneBg").addEventListener("change", () =>{
+    if ($("#noneBg").checked){
+        $(".spaceUp").style.backgroundColor = "transparent"
+        $(".spaceDown").style.backgroundColor = "transparent"
+
+    } else{
+        $(".spaceUp").style.backgroundColor = $("#bgColorText").value
+        $(".spaceDown").style.backgroundColor = $("#bgColorText").value
+    }
+})
 // por hacer aun 
 
 // None, Dark and ligth outline
@@ -214,3 +224,12 @@ $("#leading").addEventListener('change', () => {
     $('#imgTextDown').style.lineHeight = $("#leading").value
 })
 
+// Button download
+const downloadImageMeme = () =>{
+    domtoimage.toBlob($("#memeContainer"))
+    .then((blob) => {
+        saveAs(blob, "imageMeme.png")
+    })
+}
+
+$("#btnDownload").addEventListener('click', downloadImageMeme)

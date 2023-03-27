@@ -9,7 +9,7 @@ body{
     flex-direction: row-reverse;
 }
 
-/* --- Light Mode / Dark Mode --- */
+/* Light Mode / Dark Mode  */
 
 body.lightMode{
     --ColorHeader: #e0e0e0;
@@ -29,8 +29,7 @@ body.darkMode{
     --ColorForm: #393e49;
 }
 
-
-/* --- Header ---  */
+/* Header */
 
 .container{
     width: 100%;
@@ -60,19 +59,19 @@ body.darkMode{
     font-size: 2rem;
     font-weight: 600;
     letter-spacing: -1px;
-    padding-bottom: 7px;
-    margin-top: 5px;
+    padding-bottom: 0.4rem;
+    margin-top: 0.3rem;
 }
 
 .container-boton{
     display: flex;
     flex-flow: row wrap;
     width: auto; 
-    margin-bottom: 15px;
+    margin-bottom: 0.9rem;
 }
 
 i{
-    margin-right: 3px;
+    margin-right: 0.3rem;
 }
 
 button{
@@ -84,7 +83,7 @@ button{
     border: none;
     cursor: pointer;
     padding: 0.5rem;
-    margin: 2px;
+    margin: 0.1rem;
     transition: background-color 0.3s;
 }
 
@@ -103,20 +102,20 @@ button:focus {
 }
 
 
-/* --- Image Meme ---  */
+/* Image Meme */
 
 .memeContainer{
     display: flex;
     flex-direction: column;
-    height: 550px;
-    width: 550px;
-    margin-top: 25px;
+    height: 350px;
+    width: 350px;
+    margin-top: 1.5rem;
 }
 
 .spaceUp, .spaceDown{
     flex: 1 1 15%;
     background-color: #fafafa;
-    padding-top: 20px;
+    padding-top: 1.2rem;
 }
 
 .memeImage{
@@ -134,7 +133,7 @@ button:focus {
 
 .textUp, .textDown{
     color: black;
-    font-size: 40px;
+    font-size: 2.5rem;
     font-weight: 600;
     font-family: Impact, sans-serif;
     text-transform: uppercase;
@@ -144,7 +143,7 @@ button:focus {
 
 .btnDownload{
     padding: 0.7rem;
-    margin-top: 15px;
+    margin-top: 0.9rem;
     color: #fafafa;
     border-radius: 0.3em;
     background-color: #36943b;
@@ -158,10 +157,10 @@ button:focus {
     transition: background-color 0.3s;
 }
 
-/* --- Side editors --- */
+/* Side editors  */
 
 .aside{
-    width: 280px;
+    width: 100%;
     position: absolute;
     height: 100vh;
     background-color:var(--ColorAside);
@@ -172,10 +171,10 @@ button:focus {
 }
 
 .asideClose{
-    font-size: 15px;
+    font-size: 0.9rem;
     position: fixed;
-    top: 10px;
-    right: 10px;
+    top: 0.6rem;
+    right: 0.6rem;
     padding-top: 0.2rem;
     padding-bottom: 0.2rem;
     border-radius: 0.2em;
@@ -189,8 +188,7 @@ button:focus {
     display: none;
 }
 
-
-/* --- Forms ---*/
+/*  Forms */
 
 .form{
     margin: 2.5rem 1rem;
@@ -199,37 +197,46 @@ button:focus {
 h2{
     margin-bottom: 1rem;
     text-align: center;
-    font-size: 15px;
+    font-size: 0.9rem;
 }
 
 .form h3{
     color: var(--ColorFont);
-    font-size: 12px;
+    font-size: 0.75rem;
     margin-top: 1rem;
     margin-bottom: 0.1rem;
 }
 
-.input-texto {
+.inText {
     background-color: var(--ColorForm);
     color: var(--ColorFont);
-    width: 100%;
     height: 8px;
-    padding: 15px;
+    padding: 15px 10px;
     border: none;
     border-radius: 0.3em;
-    margin-bottom: 5%;
-    margin-top: 10px;
+    margin: 10px 0px;
     outline-style: none;
+    width: 100%;
 }
-
+.inWidth {
+width: fit-content;
+}
 .clFilters{
     display: flex;
     flex-direction: column;
     margin-top: 0.9rem;
 }
 
+.dFlex {
+    display: flex;
+}
+
+.marginR {
+    margin-right: 0.3rem;
+}
+
 .clFilters label{
-    font-size: 10px;
+    font-size: 0.6;
     margin-bottom: 0.3rem;
 }
 
@@ -249,10 +256,13 @@ h2{
 }
 
 .color input{
-    width: 40px;
     background-color: transparent;
     border: none;
     outline-style: none;
+    height: 24px;
+    width: 24px;
+    border: none;
+    margin-right: 6px
 }
 
 .select{
@@ -264,15 +274,14 @@ h2{
     width: 100%;
     height: 30px;
     padding: 5px 10px; 
-    margin-top: 7px;  
+    margin-top: 0.4;  
 }
 
 .xMargin{
     margin-top: 0px; 
 }
 
-
-/* --- Image Edit ---*/
+/* Image Edit */
 
 .inRange {
     width: 100%;
@@ -309,7 +318,7 @@ h2{
 }
 
 
-/* --- Form text --- */
+/* Form text  */
 
 .formTextNone{
     display: none;
@@ -320,10 +329,10 @@ h2{
 }
 
 .textCheckNone, .bgCheckNone, label{
-    font-size: 12px;
+    font-size: 0.7rem;
 }
 
-#input-tamano{
+#fontSize{
     width: 50%;
 }
 
@@ -338,7 +347,7 @@ h2{
     display: flex;
 }
 
-.boton-alineacion{
+.btnSelect{
     background-color: var(--ColorForm);
     color: var(--ColorFont);
 }
@@ -347,20 +356,13 @@ h2{
     margin-bottom: 1rem;
 }
 
-.fila{
+.file{
     display: flex;
     justify-content: space-between;
 }
 
 .color span{
     margin-left: 15px;
-}
-
-.color input{
-    width: 40px;
-    background-color: transparent;
-    border: none;
-    outline-style: none;
 }
 
 .hxColorText{
@@ -376,7 +378,7 @@ h2{
     border-radius: 0.3em;
 }
 
-.btnContour:hover , .boton-alineacion:hover{
+.btnContour:hover , .btnSelect:hover{
     background-color: rgb(179, 179, 179);
     color: #121212;
 }
@@ -390,72 +392,16 @@ h2{
 }
 
 
-/* --- RESPONSIVE --- */
+/* RESPONSIVE */
 
-@media(max-width:650px){
+@media(min-width:650px){
     .aside{
-        width:100%;
+        width:280px;
     }
 
 .memeContainer{
-    height: 400px;
-    width: 400px;
-    }
-
-    .texto-superior, .texto-interior{
-        font-size: 25px;
-    }
-}
-
-@media(max-width:420px){
-    .memeContainer{
-        height: 250px;
-        width: 250px;
-    }
-
-    .texto-superior, .texto-interior{
-        font-size: 15px;
-    }
-
-    .header{
-        height: 35vh;
-    }
-
-    .titular{
-        font-size: 1.8rem;
-    }
-
-    .boton-container{
-        flex-direction: column;
-    }
-
-    .boton-container button{
-        margin: 5px;
-    }
-
-    .clFilters{
-        margin-top: 0.4rem;
-    }
-
-    .clFilters label{
-        font-size: 10px;
-    }
-
-    .inRange{
-        height: 8px;
-        margin: 3px 0;
-    }
-
-    .inText {
-        height: 12px;
-        padding: 12px;
-        margin-bottom: 3%;
-        margin-top: 5px;
-        outline-style: none;
-    }
-
-    .textCheckNone, .bgCheckNone, .selectFont{
-        margin-bottom: 0.5rem;
+    height: 550px;
+    width: 550px;
     }
 }
 

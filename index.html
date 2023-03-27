@@ -14,9 +14,11 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <!-- CSS page -->
     <link rel="stylesheet" href="/css/styles.css">
+    <!-- library for download button -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" crossorigin="anonymous"></script>
     <title>Generador de Memes</title>
 </head>
-
 <body class="darkMode">
     <!-- Header container -->
     <main class="container">
@@ -76,9 +78,9 @@
         <!-- Image Background -->  
             <h3>FONDO</h3>
             <section class="file">
-                <article class="file color">
+                <article class="file color inText inWidth">
                     <label for=""></label>
-                    <input type="color" id="bgColor" value="#FFFFFF" aria-label="Selección color de fondo de imagen">
+                    <input type="color" id="bgColor"  value="#FFFFFF" aria-label="Selección color de fondo de imagen">
                     <p id="hexColor">#FFFFFF</p>
                 </article>
                 <article>
@@ -144,8 +146,8 @@
                 <label for=""></label>
                 <input type="text" id="inTextUp" value="" class="inText" aria-label="Ingresa el texto superior del meme">
             </article>
-            <article class="textCheckNone">
-                <input type="checkbox" id="checkUp">
+            <article class="textCheckNone dFlex">
+                <input type="checkbox" class="marginR" id="checkUp">
                 <label for="">Sin texto superior</label>
             </article>
             <article>
@@ -153,14 +155,14 @@
                 <label for=""></label>
                 <input type="text" id="inTextDown" value="" class="inText" aria-label="Ingresa el texto inferior del meme">
             </article>
-            <article class="textCheckNone">
-                <input type="checkbox" id="checkDown">
+            <article class="textCheckNone dFlex">
+                <input type="checkbox" class="marginR" id="checkDown">
                 <label for="">Sin texto inferior</label>
             </article>
             <section class="selectFont">
                 <h3>FUENTE</h3>
                 <label for=""></label>
-                <select name="option" id="opcionFont" class="selector" aria-label="Selección del tipo de fuente">
+                <select name="option" id="opcionFont" class="select" aria-label="Selección del tipo de fuente">
                     <option value="American Typewrite">American Typewrite</option>
                     <option value="Andale Mono">Andale Mono</option>
                     <option value="Arial">Arial</option>
@@ -174,15 +176,15 @@
             </section>
             <!-- Font Size and aling text -->     
             <section class= "editFontInputs">
-                <input id="fontSize" type="number" value="40">
+                <input id="fontSize" class="inText" type="number" value="40">
                 <article class="btnAlings">
-                    <button id="left"  aria-label="Justificar texto a la izquierda">
+                    <button id="left" class="btnSelect" aria-label="Justificar texto a la izquierda">
                         <i class="fas fa-align-left"></i>
                     </button>
-                    <button id="center"  aria-label="Justificar texto al centro">
+                    <button id="center" class="btnSelect" aria-label="Justificar texto al centro">
                         <i class="fas fa-align-center"></i>
                     </button>
-                    <button id="right"  aria-label="Justificar texto a la derecha">
+                    <button id="right" class="btnSelect" aria-label="Justificar texto a la derecha">
                         <i class="fas fa-align-right"></i>
                     </button>
                 </article>
@@ -192,7 +194,7 @@
                 <article class="clFilters">
                     <h3>COLOR</h3>
                     <label for=""></label>
-                    <div class="file color">
+                    <div class="file color inText inWidth">
                         <input type="color" id="colorText" value="" aria-label="Selección de color de texto">
                         <p id="hxColorChange">#FAFAFA</p>
                     </div>
@@ -200,14 +202,14 @@
                 <article class="clFilters">
                     <h3>FONDO</h3>
                     <label for="bgColorText"></label>
-                    <div class="file color">
+                    <div class="file color inText inWidth">
                         <input type="color" id="bgColorText" value="#FFFFFF" aria-label="Selección de color del fondo del texto">
                         <div id="hxColorChangeBg">#FAFAFA</div>
                     </div>
                 </article>
             </section>
-            <article class="bgCheckNone">
-                <input type="checkbox" id="noneBg">
+            <article class="bgCheckNone dFlex">
+                <input type="checkbox" class="marginR" id="noneBg">
                 <label for="">Fondo transparente</label>
             </article>
             <article>
@@ -221,12 +223,12 @@
             <article>
                 <h3>ESPACIADO</h3>
                 <label for=""></label>
-                <input id="espace" type="number" value="35" min="0" max="50" >
+                <input id="espace" class="select" type="number" value="35" min="0" max="50" >
             </article>
             <section>
                 <h3>INTERLINEADO</h3>
                 <label for=""></label>
-                <select name="leading" id="leading" class="selector">
+                <select name="leading" id="leading" class="select">
                     <option value="0.8">0.8</option>
                     <option value="1">1</option>
                     <option value="1.2">1.2</option>
@@ -237,6 +239,7 @@
             </section>
         </section>
     </aside>
+    <!-- link js -->
     <script src="/js/index.js"></script>
 </body>
 </html>
